@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Brand1 from '../../../assets/brand/Brand1.png';
 import Brand2 from '../../../assets/brand/Brand2.png';
+import Brand3 from '../../../assets/brand/Brand3.png';
 
 const BrandCarousel = () => {
     return (
@@ -19,6 +20,13 @@ const BrandCarousel = () => {
                         <img
                             className="d-block w-100"
                             src={Brand2}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={Brand3}
                             alt="Second slide"
                         />
                     </Carousel.Item>
