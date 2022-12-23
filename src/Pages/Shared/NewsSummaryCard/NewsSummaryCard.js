@@ -9,17 +9,17 @@ const NewsSummaryCard = ({ news }) => {
     const { _id, author, details, image_url, rating, title, total_view } = news;
     return (
         <Card className="mb-3">
-            <Card.Header className='d-flex '>
-                <div className="d-flex align-items-center">
+            <Card.Header className='d-flex justify-content-between align-items-center'>
+                <div className="d-flex">
                     <Image
                     roundedCircle
                     className='me-2'
-                    src={author.img}
+                    src={author?.img}
                     style={{height: '60px'}}
                     ></Image>
                     <div className="">
-                        <p className='mb-0 mt-2'>{author.name}</p>
-                        <p>{author.published_date}</p>
+                        <p className='mb-0 mt-2'>{author?.name}</p>
+                        <p>{author?.published_date}</p>
                     </div>
                 </div>
                 <div className="">
@@ -39,10 +39,10 @@ const NewsSummaryCard = ({ news }) => {
                     }
                 </Card.Text>
             </Card.Body>
-            <Card.Footer className="d-flex justify-content-between align-items-center">
-                <div>
+            <Card.Footer className="d-flex justify-content-between">
+                <div className=''>
                     <FaStar className='text-warning me-2'></FaStar>
-                    <span>{rating.number}</span>
+                    <span>{rating?.number}</span>
                 </div>
                 <div>
                     <FaEye className='me-2'></FaEye>
