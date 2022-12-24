@@ -31,11 +31,11 @@ const Header = () => {
                         <Nav.Link>Pricing</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link>
+                        <>
                             {
                                 user?.uid ? 
                                     <>
-                                        <span className='me-2'>{user?.displayName}</span>
+                                        <span className='mt-3 me-3 text-white'>{user?.displayName}</span>
                                         <Button onClick={handleLogOut} variant='light'>Log out</Button>
                                     </>
                                 :
@@ -45,8 +45,8 @@ const Header = () => {
                                     </>
                             }
                             
-                        </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        </>
+                        <Link to='/profile' className=''>
                             {
                                 user?.photoURL ?
                                 <Image
@@ -55,7 +55,7 @@ const Header = () => {
                                 <FaUserAlt></FaUserAlt>
 
                             }
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                     <div className="d-lg-none">
                         <LeftSideNav></LeftSideNav>
